@@ -249,8 +249,33 @@ footer{
   <p>Mobile: 9533095223</p>
 </footer><a class="whatsapp" href="https://wa.me/919533095223" target="_blank">
   WhatsApp
-</a><script>
-  function saveCustomer(){
+</a><script type="module">
+  // Firebase Configuration
+  // Replace below values with your Firebase project keys
+
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "123456789",
+    appId: "YOUR_APP_ID"
+  };
+
+  // Temporary Demo Save Function
+  window.saveCustomer = function(){
+    const table = document.getElementById('customerTable');
+
+    const row = `
+      <tr>
+        <td>New Customer</td>
+        <td>New PAN</td>
+        <td>Submitted</td>
+      </tr>
+    `;
+
+    table.innerHTML += row;
+
     alert('PAN Application Submitted Successfully');
   }
 </script></body>
